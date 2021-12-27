@@ -22,7 +22,7 @@ Project developed for a selection process in which the user should create a clie
 
 To run this project, you will need to add the following ​​environment variable to your .env file
 
-`DATABASE_URL="postgresql://admin:admin@localhost:5432/compassUol?schema=public"`
+`DATABASE_URL="postgresql://admin:admin@localhost:5432/myClients?schema=public"`
 
 If you are not going to use the docker, please change the url to the url of your machine's postgres
 
@@ -39,7 +39,7 @@ Clone the repository:
 Create an .env file and insert the variables passed above
 
 ```
-DATABASE_URL="postgresql://admin:admin@localhost:5432/compassUol?schema=public"
+DATABASE_URL="postgresql://admin:admin@localhost:5432/myClients?schema=public"
 ```
 
 install dependencies::
