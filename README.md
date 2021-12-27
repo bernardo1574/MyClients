@@ -63,7 +63,7 @@ Run migrations
 ```
 yarn prisma migrate dev
 or
-npm prisma migrate dev
+npx prisma migrate dev
 ```
 
 Run the seeds of cities, have all the cities of Minas Gerais
@@ -71,7 +71,7 @@ Run the seeds of cities, have all the cities of Minas Gerais
 ```
 yarn prisma db seed
 or
-npm prisma db seed
+npx prisma db seed
 ```
 
 Run the project
@@ -94,8 +94,8 @@ To run tests, run the following command
 
 ```bash
   yarn
-  yarn test
+  yarn jest
   or
   npm install
-  npm run test
+  npx jest
 ```
