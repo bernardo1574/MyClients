@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id         String   @id @default(uuid())
+  username   String   @unique
+  name       String
+  gender     String
+  birth_date DateTime @db.Date()
+  age        Int
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+  city       City     @relation(fields: [fk_id_city], references: [id])
+  fk_id_city String
+
+  @@map("clients")
+}
+
+model City {
+  id     String  @id @default(uuid())
+  city   String
+  state  String
+  client Client?
+
+  @@map("cities")
+}
