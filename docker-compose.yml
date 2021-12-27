@@ -10,7 +10,7 @@ services:
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
-      - POSTGRES_DB=compassUol
+      - POSTGRES_DB=myClients
     volumes:
       - pgdata:/data/postgres
 volumes:
